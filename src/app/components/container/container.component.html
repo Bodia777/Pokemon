@@ -1,0 +1,53 @@
+<div class="container" [ngSwitch]="loaderCheckerService.loaderChecker">
+  <div class="row filterWrapper">
+    <div class="filter col-6">
+      <h2>Filter by type:</h2>
+    </div>
+    <select class="col-6 btn-info" name="select" [(ngModel)]="select">
+      <option value="any" selected="selected"> any</option>
+      <option value="normal"> normal</option>
+      <option value="fighting"> fighting</option>
+      <option value="flying"> flying</option>
+      <option value="poison">poison</option>
+      <option value="ground">ground</option>
+      <option value="rock">rock</option>
+      <option value="bug">bug</option>
+      <option value="ghost">ghost</option>
+      <option value="steel">steel</option>
+      <option value="fire">fire</option>
+      <option value="water">water</option>
+      <option value="grass">grass</option>
+      <option value="electric">electric</option>
+      <option value="psychic">psychic</option>
+      <option value="ice">ice</option>
+      <option value="dragon">dragon</option>
+      <option value="dark">dark</option>
+      <option value="fairy">fairy</option>
+      <option value="unknown">unknown</option>
+      <option value="shadow">shadow</option>
+    </select>
+  </div>
+  <div class="row">
+    <div class="pokedex col-md-4 offset-md-4 col-sm-4 offset-sm-4  col-xs-12">
+      <h1>pokedex</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pokemonList col-sm-6 col-xs-12">
+      <div class="row">
+        <app-pokemon class="col-5 offset-1 col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-5 offset-md-0 col-sm-10 "
+          *ngFor="let item of pokemonArr | filter:select" [pokemonItem]="item"></app-pokemon>
+      </div>
+    </div>
+    <div class="pokemonCard col-6 col-xs-12">
+      <app-pokemon-details></app-pokemon-details>
+    </div>
+    <div *ngIf="detailsService.emptyArrStatus" class="col-10 offset-1">
+      <span>This type of pokemons is absent on this page.</span>
+    </div>
+    <button class="btn btn-info col-12" (click)="getNextList()">Load More</button>
+  </div>
+  <div *ngSwitchCase="true">
+    <app-loader></app-loader>
+  </div>
+</div>

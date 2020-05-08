@@ -1,0 +1,46 @@
+<div class="cardWrapper" #pokemonDetailsWrapper>
+    <div class="pictureWrapper">
+        <img class="itemImg" #pokemonImg>
+    </div>
+    <div class="pokemonName">{{detailsService.pokemonDetails.displayDetailsName}} #{{detailsService.pokemonDetails.displayDetailsId}}</div>
+    <div class="pokemonTableWrapper">
+        <table class="container-fluid">
+            <tr class="row">
+                <td class="col-6">Type</td>
+                <td class="col-6">{{detailsService.pokemonDetails.displayDetailsType}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">Attack</td>
+                <td class="col-6">{{detailsService.pokemonDetails.attack}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">Defense</td>
+                <td class="col-6">{{detailsService.pokemonDetails.defense}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">HP</td>
+                <td class="col-6">{{detailsService.pokemonDetails.hp}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">SP Attack</td>
+                <td class="col-6">{{detailsService.pokemonDetails.spAttack}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">SP Defense</td>
+                <td class="col-6">{{detailsService.pokemonDetails.spDefense}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">Speed</td>
+                <td class="col-6">{{detailsService.pokemonDetails.speed}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">Weight</td>
+                <td class="col-6">{{detailsService.pokemonDetails.weight}}</td>
+            </tr>
+            <tr class="row">
+                <td class="col-6">Total moves</td>
+                <td class="col-6">{{detailsService.pokemonDetails.totalMoves}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

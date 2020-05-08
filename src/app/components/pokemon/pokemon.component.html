@@ -1,0 +1,9 @@
+<div class="cardWrapper" (click)="setDetails()">
+    <div class="pictureWrapper">
+        <img class="itemImg" #itemImg>
+    </div>
+    <div class="pokemonName">{{pokemonItem.name }} #{{pokemonId}}</div>
+    <div class="pokemonTypeWrapper">
+        <span *ngFor="let type of types" class="pokemonType" appTypeColor  [type]="type">{{type}}</span>
+    </div>
+</div>

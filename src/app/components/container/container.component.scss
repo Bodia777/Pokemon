@@ -1,0 +1,44 @@
+.filterWrapper {
+  height: 40px;
+  background-color: black;
+
+  h2 {
+    color: white;
+    font-family: tinos;
+    text-align: center;
+  }
+}
+
+select,
+option {
+  font-family: tinos;
+  color: white;
+  height: 40px;
+  font-size: 24px;
+}
+
+.pokedex {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  min-width: 210px;
+  border: 1px solid black;
+
+  h1 {
+    text-transform: uppercase;
+    color: black;
+    font-family: tinos;
+    text-align: center;
+  }
+}
+
+span {
+  font-family: tinos;
+  font-size: 18px;
+}
+
+.btn {
+  height: 40px;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 10px;
+}

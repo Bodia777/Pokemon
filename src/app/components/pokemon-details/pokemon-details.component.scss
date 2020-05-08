@@ -1,0 +1,52 @@
+.cardWrapper {
+    width: 306px;
+    height: 596px;
+    border: 2px solid black;
+    padding: 22px;
+    margin-bottom: 44px;
+    margin-left: 6vw;
+    .pictureWrapper{
+        max-width: 262px;
+        height: 262px;
+        border: 2px solid black;
+        overflow: hidden;
+        .itemImg{
+            width: 100%;
+            object-fit: cover;
+            min-height: 100%
+        }
+    }
+    .pokemonName{
+        font-weight: 500;
+        text-align: center;
+        text-transform: Capitalize;
+        margin-bottom: 20px;
+    }
+    .pokemonTableWrapper{
+        width: 100%;
+        padding: 14px;
+        td{
+            border: 1px solid black;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .cardWrapper {
+        margin-left: -3vw;
+    }
+}
+@media screen and (max-width: 640px) {
+    .cardWrapper {
+        margin-left: -11vw;
+    }
+}
+@media screen and (max-width: 575px) {
+    .cardWrapper {
+        margin-left: calc(46vw - 153px);
+    }
+}
+// @media screen and (max-width: 425px) {
+//     .cardWrapper {
+//         margin-left: calc(44vw - 153px);
+//     }
+// }
